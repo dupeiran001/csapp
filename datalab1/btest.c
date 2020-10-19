@@ -116,7 +116,10 @@ int test6(){
 	int i = 0;
 	int score = 0;
 	if(bang(0)==test_bang(0)){
-		score+=sumscore/2;
+		score+=sumscore/4;
+	}
+	if(bang(0x80000000)==test_bang(0x80000000)){
+		score+=sumscore/4;
 	}
 	for(i=0;i<sumscore/2;i++){
 		int x = myrand();
@@ -177,7 +180,11 @@ int test10(){
 	int i = 0;
 	int score = 0;
 	if(isPositive(0)==test_isPositive(0)){
-		score+=sumscore/2;
+		score+=sumscore/4;
+	}
+	int Tmin = -2147483648;
+	if(isPositive(Tmin)==test_isPositive(Tmin)){
+		score+=sumscore/4;
 	}
 	for(i=0;i<sumscore/2;i++){
 		int x = myrand();
@@ -194,7 +201,11 @@ int test11(){
 	int i = 0;
 	int score = 0;
 	if(isNonNegative(0)==test_isNonNegative(0)){
-		score+=sumscore/2;
+		score+=sumscore/4;
+	}
+	int Tmin = -2147483648;
+	if(isNonNegative(Tmin)==test_isNonNegative(Tmin)){
+		score+=sumscore/4;
 	}
 	for(i=0;i<sumscore/2;i++){
 		int x = myrand();
@@ -262,7 +273,10 @@ int test15(){
 	int i = 0;
 	int score = 0;
 	if(isNonZero(0)==test_isNonZero(0)){
-		score+=sumscore/2;
+		score+=sumscore/4;
+	}
+	if(isNonZero(0x80000000)==test_isNonZero(0x80000000)){
+		score+=sumscore/4;
 	}
 	for(i=0;i<sumscore/2;i++){
 		int x = myrand();
