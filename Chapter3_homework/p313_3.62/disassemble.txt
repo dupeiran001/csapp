@@ -1,0 +1,33 @@
+
+src:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <switch3>:
+   0:	83 fa 04             	cmp    $0x4,%edx
+   3:	77 43                	ja     48 <switch3+0x48>
+   5:	89 d2                	mov    %edx,%edx
+   7:	48 8d 0d 00 00 00 00 	lea    0x0(%rip),%rcx        # e <switch3+0xe>
+   e:	48 63 04 91          	movslq (%rcx,%rdx,4),%rax
+  12:	48 01 c8             	add    %rcx,%rax
+  15:	ff e0                	jmpq   *%rax
+  17:	b8 1b 00 00 00       	mov    $0x1b,%eax
+  1c:	c3                   	retq   
+  1d:	48 8b 06             	mov    (%rsi),%rax
+  20:	48 8b 17             	mov    (%rdi),%rdx
+  23:	48 89 16             	mov    %rdx,(%rsi)
+  26:	c3                   	retq   
+  27:	48 8b 07             	mov    (%rdi),%rax
+  2a:	48 03 06             	add    (%rsi),%rax
+  2d:	48 89 07             	mov    %rax,(%rdi)
+  30:	c3                   	retq   
+  31:	48 c7 07 3b 00 00 00 	movq   $0x3b,(%rdi)
+  38:	48 8b 06             	mov    (%rsi),%rax
+  3b:	c3                   	retq   
+  3c:	48 8b 06             	mov    (%rsi),%rax
+  3f:	48 89 07             	mov    %rax,(%rdi)
+  42:	b8 1b 00 00 00       	mov    $0x1b,%eax
+  47:	c3                   	retq   
+  48:	b8 0c 00 00 00       	mov    $0xc,%eax
+  4d:	c3                   	retq   
