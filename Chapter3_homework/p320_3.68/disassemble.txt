@@ -1,0 +1,11 @@
+
+src:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <setVal>:
+   0:	48 63 46 08          	movslq 0x8(%rsi),%rax
+   4:	48 03 46 20          	add    0x20(%rsi),%rax
+   8:	48 89 87 b8 00 00 00 	mov    %rax,0xb8(%rdi)
+   f:	c3                   	retq   

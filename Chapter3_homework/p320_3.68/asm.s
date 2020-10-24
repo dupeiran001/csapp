@@ -7,7 +7,7 @@ setVal:
 	.cfi_startproc
 	movslq	8(%rsi), %rax
 	addq	32(%rsi), %rax
-	movq	%rax, 320(%rdi)
+	movq	%rax, 184(%rdi)
 	ret
 	.cfi_endproc
 .LFE0:
