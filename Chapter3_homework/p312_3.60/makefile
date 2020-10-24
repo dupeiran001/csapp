@@ -12,7 +12,7 @@ DISASFILE = disassemble.txt
 all :
 	$(CC) $(CFLAGS) $(TARGET) -o $(RESULT)
 	objdump -S $(RESULT) > $(DISASFILE)
-	nvim $(DISASFILE)
+	vi $(DISASFILE)
 
 asm :
 	$(CC) $(CASFLAGS) $(TARGET) -o $(ASRESULT) 
