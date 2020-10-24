@@ -16,6 +16,7 @@ all :
 
 asm :
 	$(CC) $(CASFLAGS) $(TARGET) -o $(ASRESULT) 
+	vi $(ASRESULT)
 
 clean :
 	rm *.s
