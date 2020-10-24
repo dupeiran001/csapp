@@ -18,8 +18,6 @@ https://github.com/dupeiran001/csapp/tree/main/Chapter3_homework
 >
 > Kernel : 5.8.14-arch1-1
 
-[TOC]
-
 
 
 ------
