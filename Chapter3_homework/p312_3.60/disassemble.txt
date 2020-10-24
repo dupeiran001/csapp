@@ -1,0 +1,19 @@
+
+src:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <loop>:
+   0:	89 f1                	mov    %esi,%ecx
+   2:	b8 01 00 00 00       	mov    $0x1,%eax
+   7:	ba 00 00 00 00       	mov    $0x0,%edx
+   c:	eb 0c                	jmp    1a <loop+0x1a>
+   e:	48 89 c6             	mov    %rax,%rsi
+  11:	48 21 fe             	and    %rdi,%rsi
+  14:	48 09 f2             	or     %rsi,%rdx
+  17:	48 d3 e0             	shl    %cl,%rax
+  1a:	48 85 c0             	test   %rax,%rax
+  1d:	75 ef                	jne    e <loop+0xe>
+  1f:	48 89 d0             	mov    %rdx,%rax
+  22:	c3                   	retq   
