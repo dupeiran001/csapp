@@ -176,29 +176,29 @@ switch3:
 	.long	.L5-.L4
 	.long	.L3-.L4
 	.text
-.L3:
+.L3:                     //case MODE_E 
 	movl	$27, %eax
 	ret
-.L8:
+.L8:                     //case MODE_A
 	movq	(%rsi), %rax
 	movq	(%rdi), %rdx
 	movq	%rdx, (%rsi)
 	ret
-.L7:
+.L7:                     //case MODE_B
 	movq	(%rdi), %rax
 	addq	(%rsi), %rax
 	movq	%rax, (%rdi)
 	ret
-.L6:
+.L6:                     //case MODE_C
 	movq	$59, (%rdi)
 	movq	(%rsi), %rax
 	ret
-.L5:
+.L5:                     //case MODE_D
 	movq	(%rsi), %rax
 	movq	%rax, (%rdi)
 	movl	$27, %eax
 	ret
-.L9:
+.L9:                     //case default
 	movl	$12, %eax
 	ret
 	.cfi_endproc
